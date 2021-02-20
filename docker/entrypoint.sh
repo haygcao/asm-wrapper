@@ -16,7 +16,7 @@ if [ ${enable_iqiyi} ];then
 fi
 
 if [ ${enable_unicom} ];then
-  echo "*/30 7-22 * * *       node ${ASM_DIR}/scripts/index.js unicom --cookies ${cookies} --user ${user} --password ${password} --appid ${appid}" >> /etc/crontabs/root
+  echo "*/30 0-23 * * *       node ${ASM_DIR}/scripts/index.js unicom --cookies ${cookies} --user ${user} --password ${password} --appid ${appid}" >> /etc/crontabs/root
 fi
 
 if [ ${enable_10086} ];then
