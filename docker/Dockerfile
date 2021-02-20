@@ -2,14 +2,14 @@ FROM node:lts-alpine
 LABEL maintainer="clamp <imclamp@foxmail.com>"
 ARG ASM_SCRIPTS_URL=https://github.com/DJ-clamp/BaseSation
 ARG ASM_SCRIPTS_BRANCH=dev
-ARG ASM_WRAPPER_URL=https://github.com/haygacao/asm-wrapper
+ARG ASM_WRAPPER_URL=https://github.com/haygcao/asm-wrapper
 ARG ASM_WRAPPER_BRANCH=main
 ARG enable_unicom=true
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     LANG=zh_CN.UTF-8 \
     SHELL=/bin/bash \
     PS1="\u@\h:\w \$ " \
-    ASM_DIR=/AutoSignMachine \
+    ASM_DIR=/AutoSignMachine
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update -f \
     && apk upgrade \
