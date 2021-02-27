@@ -25,5 +25,5 @@ jobs:
         with:
           source_repo: "https://github.com/DJ-clamp/asm-wrapper.git"
           source_branch: "main"
-          destination_branch: "new"
+          destination_branch: "newest"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
